@@ -4,7 +4,7 @@ class Bullet extends Floater{
       myCenterY = bob.getY();
       myXspeed = bob.getmyXspeed();
       myYspeed = bob.getmyYspeed();  
-      myPointDirection = 0;
+      myPointDirection = bob.getDirection();
       accelerate(6);
  }
    public double getX() {
@@ -13,7 +13,7 @@ class Bullet extends Floater{
     public double getY() {
       return myCenterY;
     }
-    public void show(){
+   public void show(){
      fill(255,0,0);
      ellipse((float)myCenterX, (float)myCenterY, 5,5); 
    }
